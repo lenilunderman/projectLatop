@@ -1,0 +1,186 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+body{
+
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    display: flex; /*  move everything in one line*/
+    width: 90%;
+    margin: auto; /* setting to auto, the css will figure the width and center it */ 
+    height: 10vh;
+    align-items: center; /*align the menu to the center of the div header*/
+}
+.logo-container{
+
+    flex: 1; /* takes the whole space in the width 90% */
+}
+.logo{
+    margin-left: 10px;
+    font-weight: 400;
+}
+nav{
+    flex: 2;   
+    
+}
+.nav-links{
+    justify-content: space-around;
+    /*the li spread across the div*/
+    list-style: none;
+    /* Remove the dots from the list ul>li */  
+}
+.nav-link{
+    color: #5f5f79;
+    font-size: 18px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.cart{
+    flex: 1
+    justify-content: flex-end;
+    
+}
+/* Put everyhing in place */
+.logo-container,.nav-links,.cart{
+    display: flex;
+}
+
+.presentation{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    min-height: 80vh;
+    align-items: center; /* align to the center of the page - bring the text and the laptop to the middle of the div */
+}
+.introduction{
+    flex: 1;
+}
+
+.intro-text h1{
+    font-weight: 500;
+    font-size: 40px;
+    /*trick to add a linear gradient to the text*/
+    background: linear-gradient(to right, #494964, #6f6f89);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent; 
+}
+.intro p{
+    font-size: 22px;
+    margin-top: 10px;
+    color: #858772;
+}
+
+.cover{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+}
+.cover img{
+    height: 100%;
+    /* tip - adding shadow to an image */
+    filter: drop-shadow(0px 5px 3px black);
+    /*tip - adding an animation */
+    animation: drop 2s ease;
+}
+
+.cta{
+    padding: 50px 0px 0px 0px;
+}
+.cta-select{
+    border:2px solid #c36bcc;
+    background: transparent;
+    color: #c36bcc;
+    width: 150px;
+    height: 50px;
+    font-size: 16px;
+}
+.cta-add{
+    background: #c36bcc;
+    width: 150px;
+    height: 50px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    margin:30px 0px 0px 30px;
+}
+
+.big-circle{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+    opacity: 0.7;
+    height: 80%;
+}
+
+.mid-circle{
+    position: absolute;
+    top: 30%;
+    right: 30%;
+    z-index: -1;
+    height: 50%;
+    opacity: 0.5;
+}
+.small-circle{
+    position: absolute;
+    bottom: 0%;
+    left: 25%;   
+    z-index: -1;
+}
+
+/* keyframe animation */
+@keyframes drop {
+    0%{
+        opacity: 0;
+        transform: translateY(-80px);
+        
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+
+
+
+
+/* Media Querries*/
+@media screen and (max-width:1024px){
+    
+    .presentation{
+        flex-direction: column;
+    } 
+    .introduction{
+        margin-top: 5vh;
+        text-align: center;
+    }
+    .intro-text h1{
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+    .cta{
+        padding: 10px 0px 0px 0px;
+    }
+    
+    .cover img{
+        height: 55vh;
+    }
+    
+    
+    
+}
+
+
+
+
+
